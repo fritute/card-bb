@@ -9,9 +9,9 @@ const disciplinas = [
 const produtos = [
     {nome:'Camiseta Gorrilaz', camiseta:'gorillaz.png',  descrição: 'Banda Gorillaz'  , preço:'R$:100,00'},
     {nome:'Camiseta Nautiruts', camiseta:'nautiruts.png', descrição: 'Camiseta banda de reagge Nautiruts' , preço:'R$:150,00'},
-    {nome:'Camiseta Kiss', camiseta:'kiss.png', preço:'R$:110,00'},
-    {nome:'Camiseta Zeca Pagodinho', camiseta:'pagodinho.png', preço:'R$:300,00'},
-    {nome:'Camiseta System of Down', camiseta:'system.png', preço:'R$:190,00'},
+    {nome:'Camiseta Kiss', camiseta:'kiss.png', descrição: 'Camiseta de rock da banda KISS', preço:'R$:110,00'},
+    {nome:'Camiseta Zeca Pagodinho', camiseta:'pagodinho.png', descrição:'Camiseta do cantor de Pagode Zeca Pagodinho' ,preço:'R$:300,00'},
+    {nome:'Camiseta System of Down', camiseta:'system.png', descrição:'Camiseta da Banda de rock System of Down', preço:'R$:190,00'},
    
 ]
 
@@ -38,19 +38,19 @@ const cardsContainer = document.getElementById("cards-container");
 produtos.forEach(produto => {
   const card = document.createElement("div")
   card.classList.add("card")
+  const nome = document.createElement("h3")
+  nome.textContent = produto.nome
+  card.appendChild(nome)
+  
+  const descrição = document.createElement("p")
+  descrição.textContent = produto.descrição
+  card.appendChild(descrição)
 
   const imagem = document.createElement("img")
   imagem.src = `./img/${produto.camiseta}`
   imagem.alt = produto.nome
   card.appendChild(imagem)
 
-  const nome = document.createElement("h3")
-  nome.textContent = produto.nome
-  card.appendChild(nome)
-
-  const descrição = document.createElement("p")
-  descrição.textContent = produto.descrição
-  card.appendChild(descrição)
 
   const preco = document.createElement("p")
   preco.textContent = produto.preço
