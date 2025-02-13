@@ -1,107 +1,116 @@
 :root{
-    --cor-hover: white
+  --cor-hover: white
 }
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 ul,ol,li{
-    list-style: none;
+  list-style: none;
 }
 a{
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 .menu{
-    display: flex;
-    justify-content: end;
-    gap: 16px;
-    background-color: black;
-    color: white;
-    padding: 16px;
+  display: flex;
+  justify-content: end;
+  gap: 16px;
+  background-color: black;
+  color: white;
+  padding: 16px;
 }
 .menu li{
-    display: flex;
-    gap: 4px;
-    align-items: center;
-    padding: 4px 8px;
-    transition: 0.7s;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  padding: 4px 8px;
+  transition: 0.7s;
 }
 
 .menu li:hover{
-    background-color: var(--cor-hover);
+  background-color: var(--cor-hover);
 }
 .menu img{
-    height: 16px;
+  height: 16px;
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.cards-container {
+  display: flex;
+  gap: 20px;
+  align-items: stretch; 
+}
+.cor-topo {
+  height: 40px;
+  border-radius: 10px 10px 0 0;
+  position: relative;
+  overflow: hidden;
+  background-color:lightblue;
+}
+
+.card {
+  width: 200px;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+ 
+
+}
+.card .card-top {
+  background-color:black;
+  height: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin-top: 10px;
+}
+
+.card p {
+  margin-top: 5px;
+  flex-grow: 1; 
   
-  .cards-container {
-    display: flex;
-    gap: 20px;
-    align-items: stretch; 
-  }
+}
+
+.card .tamanhos {
+  padding: 10px;
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.card .tamanhos button {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.card button.comprar {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: yellow; 
+  color: black; 
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  border-radius: 5px;
   
-  .card {
-    width: 200px;
-    border: 1px solid #ccc;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-  }
-  .card .card-top {
-    background-color: #007bff;
-    height: 20px;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-  }
-  
-  .card h3 {
-    margin-top: 10px;
-  }
-  
-  .card p {
-    margin-top: 5px;
-    flex-grow: 1; 
-    
-  }
-  
-  .card .tamanhos {
-    padding: 10px;
-    display: flex;
-    gap: 5px;
-    margin-top: 10px;
-  }
-  
-  .card .tamanhos button {
-    padding: 5px 10px;
-    border: 1px solid #ccc;
-    background-color: #eee;
-    cursor: pointer;
-  }
-  
-  .card button.comprar {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: yellow; 
-    color: black; 
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    display: flex;
-    border-radius: 5px;
-    
-    margin-bottom: 0; 
-  }
+  margin-bottom: 0; 
+}

@@ -33,24 +33,31 @@ function criarMenu(disciplina){
 disciplinas.forEach(criarMenu)
 
 
-const cardsContainer = document.getElementById("cards-container");
+const cardsContainer = document.getElementById("cards-container")
 
 produtos.forEach(produto => {
-  const card = document.createElement("div")
-  card.classList.add("card")
+
+
+
+  const card = document.createElement("div");
+  card.classList.add("card");
+
+  const corTopo = document.createElement('div')
+  corTopo.classList.add('cor-topo')
+  card.appendChild(corTopo)
+
   const nome = document.createElement("h3")
   nome.textContent = produto.nome
   card.appendChild(nome)
-  
+
   const descrição = document.createElement("p")
   descrição.textContent = produto.descrição
   card.appendChild(descrição)
 
-  const imagem = document.createElement("img")
+  const imagem = document.createElement("img");
   imagem.src = `./img/${produto.camiseta}`
   imagem.alt = produto.nome
   card.appendChild(imagem)
-
 
   const preco = document.createElement("p")
   preco.textContent = produto.preço
@@ -64,9 +71,9 @@ produtos.forEach(produto => {
     const botaoTamanho = document.createElement("button")
     botaoTamanho.textContent = tamanho
     tamanhos.appendChild(botaoTamanho)
-  });
+  })
 
-  card.appendChild(tamanhos)
+  card.appendChild(tamanhos);
 
   const botaoComprar = document.createElement("button")
   botaoComprar.classList.add("comprar")
